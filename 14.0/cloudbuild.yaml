@@ -11,7 +11,7 @@
    args:
    - 'run'
    - 'deploy'
-   - 'cloudrun1'
+   - 'cloudron1'
    - '--image'
    - 'gcr.io/devops-227806/cloudron1:$COMMIT_SHA'
    - '--region'
