@@ -8,6 +8,6 @@ steps:
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'cloudrun1', '--image', 'gcr.io/devops-227806/odoo', '--cluster', 'cloudrun-default-cluster', '--cluster-location', 'us-central1-a', '--platform', 'gke']
+  args: ['run', 'deploy', 'cloudron1', '--image', 'gcr.io/devops-227806/odoo', '--cluster', 'cloudrun-default-cluster', '--cluster-location', 'us-central1-a', '--platform', 'gke']
 images:
 - gcr.io/devops-227806/odoo
