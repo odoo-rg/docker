@@ -1,6 +1,6 @@
 steps:
 # Build the container image
-- name: 'gcr.io/odoo/docker'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/devops-227806/odoo', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
