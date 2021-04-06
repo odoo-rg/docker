@@ -1,0 +1,13 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/devops-227806/odoo', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/devops-227806/odoo']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'cloudron1', '--image', 'gcr.io/devops-227806/odoo', '--cluster', 'cloudrun-default-cluster', '--cluster-location', 'us-central1-a', '--platform', 'gke']
+images:
+- gcr.io/devops-227806/odoo
